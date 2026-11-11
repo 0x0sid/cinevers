@@ -11,7 +11,7 @@ This repository is the **frontend** only: the site, the 180° viewer and a typed
 ## For judges
 
 Try it live: https://www.cinevers.xyz/judges  
-Invitation password: invitecineverstoycschool (3 generations in total, 720p).  
+Invitation password: invitecineverstoycschool (5 generations in total, 720p).  
 This repository contains the frontend only. The backend and the generation engine are proprietary and not included.
 
 ## What is in here
