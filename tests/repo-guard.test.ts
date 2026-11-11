@@ -55,7 +55,7 @@ describe("frontend-only guard", () => {
     }
   });
   it(".env.example holds exactly one setting: the API URL", () => {
-    const lines = fs.readFileSync(path.join(ROOT, ".env.example"), "utf-8").split("\n").filter((l) => l.trim() && !l.startsWith("#"));
+    const lines = fs.readFileSync(path.join(ROOT, ".env.example"), "utf-8").split(/\r?\n/).filter((l) => l.trim() && !l.startsWith("#"));          // Windows checkouts have CRLF
     expect(lines).toEqual(["NEXT_PUBLIC_CINEVERS_API_URL=https://www.cinevers.xyz"]);
   });
   it("reads all data through the typed client (no raw fetch to the API outside lib/cinevers)", () => {
