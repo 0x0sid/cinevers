@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+/* Cinevers tokens. Ink/Graphite/Paper/Stone + ONE accent (Signal blue: primary CTA, focus rings, links, status dots). No gradients except the hero overlay, no glows.
+   Stone (#8A8A8A) is only used as TEXT on Ink/Graphite (5.9:1 / 5.3:1); on Paper, secondary text uses --color-paper-mute (#5C5C5C, 6.4:1). */
+@theme inline {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-instrument), ui-serif, Georgia, serif;
+  --color-ink: #0a0a0a;
+  --color-graphite: #161616;
+  --color-paper: #fafaf8;
+  --color-stone: #8a8a8a;
+  --color-paper-mute: #5c5c5c;
+  --color-signal: #2d5bff;
+  --color-signal-hover: #1e46e6;
+}
+
+@keyframes ss-caret { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+@keyframes ss-rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+.ss-caret { animation: ss-caret 1.1s steps(1) infinite; }
+@media (prefers-reduced-motion: no-preference) { .ss-rise { animation: ss-rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both; } }
+@media (prefers-reduced-motion: reduce) { .ss-caret { animation: none; } .ss-hero-video { display: none; } .ss-hero-still { display: block !important; } }
+
+.ss-serif-tight { letter-spacing: -0.025em; }
+
+html { background: #0a0a0a; color-scheme: dark; scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { background: #0a0a0a; color: #fff; min-height: 100svh; }
+:focus-visible { outline: 2px solid #2d5bff; outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .animate-pulse { animation: none; } }
+html.ss-lock { overflow: hidden; }
+/* the WebXR button from three.js is created in script: make it look like our controls (it sets position/size inline through the CSSOM, which the CSP allows) */
+.ss-vr button { position: static !important; width: auto !important; height: 2.75rem; padding: 0 1rem; border-radius: 9999px; background: #2d5bff; color: #fff; border: 0; font: 500 0.875rem var(--font-geist-sans), system-ui, sans-serif; cursor: pointer; }
+.ss-vr button:hover { background: #1e46e6; }
