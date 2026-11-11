@@ -8,6 +8,12 @@ Live: [www.cinevers.xyz](https://www.cinevers.xyz)
 
 This repository is the **frontend** only: the site, the 180° viewer and a typed client for the public API. The backend and the generation engine are **proprietary and not included**. Everything the site shows comes from the hosted public API described [below](#api). See [LICENSE](LICENSE): source-available for viewing, all rights reserved.
 
+## For judges
+
+Try it live: https://www.cinevers.xyz/judges  
+Invitation password: invitecineverstoycschool (3 generations in total, 720p).  
+This repository contains the frontend only. The backend and the generation engine are proprietary and not included.
+
 ## What is in here
 
 - **Site**: a full-bleed video hero with the prompt box, a gallery with a side panel (read the prompt, load it back into the form, open the viewer), Newest/Popular sorting, FAQ.
